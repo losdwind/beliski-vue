@@ -1,20 +1,38 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Logup from "../views/Logup.vue";
+import { auth } from "../firebase/config";
+
+const requireAuth = (
+  to: any,
+  from: any,
+  next: (arg0: { name: string } | null) => void
+) => {
+  const user = auth.currentUser;
+  if (!user) {
+    next({ name: "Login" });
+  } else {
+    next(null);
+  }
+};
 
 const routes: Array<RouteRecordRaw> = [
+  {
+    path: "/Login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/Logup",
+    name: "Logup",
+    component: Logup,
+  },
   {
     path: "/",
     name: "Home",
     component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    beforeEnter: requireAuth,
   },
 ];
 
