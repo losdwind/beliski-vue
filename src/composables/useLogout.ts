@@ -25,3 +25,5 @@ const logout = async () => {
 const useLogout = () => {
   return { error, isPending, logout };
 };
+
+export default useLogout;

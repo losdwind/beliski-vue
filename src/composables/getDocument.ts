@@ -16,3 +16,5 @@ const useDocument = (docRef: DocumentReference) => {
     }
   });
 };
+
+export default useDocument;
