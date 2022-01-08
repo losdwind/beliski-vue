@@ -13,7 +13,7 @@ const requireAuth = (
 ) => {
   const user = auth.currentUser;
   if (!user) {
-    next({ name: "Log-in" });
+    next({ name: "Home-nav" });
   } else {
     next(null);
   }
@@ -34,7 +34,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Home-nav",
     component: Home,
-    beforeEnter: requireAuth,
+    // beforeEnter: requireAuth,
   },
 ];
 

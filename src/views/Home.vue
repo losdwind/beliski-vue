@@ -6,7 +6,7 @@
       class="absolute z-20 h-full p-4 bg-gray-100 border-r border-gray-100 sm:relative"
     >
       <div class="flex w-full">
-        <div class="flex flex-col justify-center w-1/4 w-full">
+        <div class="flex flex-col justify-center w-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="mt-1 cursor-pointer icon icon-tabler icon-tabler-menu-2"
