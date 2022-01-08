@@ -1,8 +1,10 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { defineConfig } from 'vite';
+import {createRouter, RouteRecordRaw, Router, createWebHistory} from 'vue-router';
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Logup from "../views/Logup.vue";
 import { auth } from "../firebase/config";
+
 
 const requireAuth = (
   to: any,
@@ -36,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
-const router = createRouter({
+const router:Router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
