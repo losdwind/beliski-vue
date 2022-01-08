@@ -11,7 +11,7 @@ const requireAuth = (
 ) => {
   const user = auth.currentUser;
   if (!user) {
-    next({ name: "Login" });
+    next({ name: "Log-in" });
   } else {
     next(null);
   }
@@ -20,17 +20,17 @@ const requireAuth = (
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/Login",
-    name: "Login",
+    name: "Log-in",
     component: Login,
   },
   {
     path: "/Logup",
-    name: "Logup",
+    name: "Log-up",
     component: Logup,
   },
   {
     path: "/",
-    name: "Home",
+    name: "Home-nav",
     component: Home,
     beforeEnter: requireAuth,
   },
