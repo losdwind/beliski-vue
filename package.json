@@ -7,9 +7,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.4.2",
+    "@heroicons/vue": "^1.0.5",
+    "@tailwindcss/forms": "^0.4.0",
     "firebase": "^9.6.2",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
